@@ -5,12 +5,13 @@
  * @country: South Africa
  * CRUD LocalStorage ORM Utils
  */
- const bucket = localStorage;
- const CRUD = {
-      Save: (bucketName) => bucket.setItem(bucketName, JSON.stringify(eval(bucketName))),
-      Delete: (bucketName) => bucket.setItem(bucketName, JSON.stringify(null)),
-      Read: (bucketName) => JSON.parse(bucket.getItem(bucketName)),
-      Create: (bucketName) => bucket.setItem(bucketName, null),
+const CRUD = {
+      Save: function (bucketName, data){
+            return localStorage.setItem(bucketName, JSON.stringify(data))
+      },
+      Delete: (bucketName) => localStorage.setItem(bucketName, JSON.stringify(null)),
+      Read: (bucketName) => JSON.parse(localStorage.getItem(bucketName)),
+      Create: (bucketName) => localStorage.setItem(bucketName, null),
       Config: (options)=>{
             firebase: false
       },
