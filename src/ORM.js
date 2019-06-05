@@ -6,11 +6,11 @@
  * CRUD LocalStorage ORM Utils
  */
 
- const  bucket = localStorage;
- const CRUD =  {
-      Save:  (bucketName) =>   bucket.setItem(bucketName, JSON.stringify(eval(bucketName))),
+ const bucket = localStorage;
+ const CRUD = {
+      Save: (bucketName) => bucket.setItem(bucketName, JSON.stringify(eval(bucketName))),
       Delete: (bucketName) => bucket.setItem(bucketName, JSON.stringify(null)),
-      Read:  (bucketName) => JSON.parse(bucket.getItem(bucketName)),
-      Create:  (bucketName) =>  bucket.setItem(bucketName, null)
+      Read: (bucketName) => JSON.parse(bucket.getItem(bucketName)),
+      Create: (bucketName) => bucket.setItem(bucketName, null)
 }
 const  ORM = () => Object.create(CRUD);
