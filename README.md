@@ -1,5 +1,8 @@
 
-#Data model to save to storage can be Object or Array
+<h1>Data model to save to storage can be Object or Array</h1>
+
+
+<pre>
 let SubscriberInformation = {
                   customerName: "thembi",
                   customerSurname: "matyila",
@@ -12,13 +15,17 @@ let SubscriberInformation = {
                   country: "south africa",
                   zip: "1984"
 }
+  </pre>
 
-#Delete data from the storage
+<h4>Delete data from the storage</h4>
+
 ORM().Delete("SubscriberInformation");
 
 
-#Save data to the storage
+<h4>Save data to the storage</h4>
+
 ORM().Save("SubscriberInformation");
 
-#Read data from the storage
+<h4>Read data from the storage</h4>
+
 let mydata = ORM().Read("SubscriberInformation");
