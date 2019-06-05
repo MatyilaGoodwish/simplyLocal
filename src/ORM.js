@@ -33,5 +33,3 @@ const CRUD = {
 const  ORM = () => Object.create(CRUD);
 
 
-
-
