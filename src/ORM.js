@@ -1,9 +1,9 @@
 /**
  * @author: Goodwish
  * @copyright: 2019
- * @license MIT
+ * @license MICT South Africa
  * @country: South Africa
- * CRUD LocalStorage ORM Utils
+ * Working with localStorage Browser API
  */
 const CRUD = {
       Save: function (bucketName, data){
@@ -13,6 +13,6 @@ const CRUD = {
       Read: (bucketName) => JSON.parse(localStorage.getItem(bucketName)),
       Create: (bucketName) => localStorage.setItem(bucketName, null),
 }
-const ORM = () => Object.create(CRUD);
+const ORM = () => Object.create(CRUD); //Create a prototype object
 
 
