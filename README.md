@@ -1,9 +1,9 @@
 
-<h1>Data model to save to storage can be Object or Array</h1>
+<h4>Data model to save to storage can be Object or Array</h4>
 
 
 <pre>
-let SubscriberInformation = {
+let Customer = {
     customerName: "thembi",
     customerSurname: "matyila",
     phone: "082 632 5761",
@@ -17,14 +17,18 @@ let SubscriberInformation = {
 }
 </pre>
 
+<p class="color:silver">
+    This will cause the object itself with its name to be saved directly to the localStorage with the same object name it can be retrieved from the storage, still implementing events that will listen to data changes and update the object using fast caching.    
+</p>
+
 <h4>Delete data from the storage</h4>
 
-ORM().Delete("SubscriberInformation");
+ORM().Delete("Customer");
 
 <h4>Save data to the storage</h4>
 
-ORM().Save("SubscriberInformation");
+ORM().Save("Customer"); 
 
 <h4>Read data from the storage</h4>
 
-let mydata = ORM().Read("SubscriberInformation");
+let mydata = ORM().Read("Customer");
