@@ -26,9 +26,10 @@ let Customer = {
 ORM().Delete("Customer");
 
 <h4>Save data to the storage</h4>
-
+Save the data after every update, the feature to listen to events will cause something like ORM().SaveAsync() which will trigger listening on the event where Customers will be the observable custom events to ORM().Save() will dispatch on Object Customer updates.
 ORM().Save("Customer"); 
 
 <h4>Read data from the storage</h4>
 
-let mydata = ORM().Read("Customer");
+Start reading the data from the Customer entity to CustomerRef for usage.
+let CustomerRef = ORM().Read("Customer");
