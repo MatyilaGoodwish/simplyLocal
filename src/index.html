@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <!-- 
-            @author: Goodwish
-            @copyright 2019
-      -->
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>ORM Local Storage Example</title>
-      <script src="ORM.js"></script>
+      <script src="ORM.js" type="module"></script>
 </head>
 <body>
    
@@ -28,12 +24,11 @@
                   country: "south africa",
                   zip: "2196"
             }
-
             /* You can use the model name to save it to the local storage */
-            ORM().Save("SubscriberInformation");
+            ORM.Save("SubscriberInformation");
 
            /* You can use the model name to read it from the local storage */
-            console.table( ORM().Read("SubscriberInformation") );
+            console.table( ORM.Read("SubscriberInformation") );
       </script>
 </body>
 </html>
